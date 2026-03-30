@@ -6,74 +6,80 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            background: linear-gradient(to bottom, #f7f9fc, #e6e9ef);
+            margin: 0;
+            padding: 30px 20px;
             line-height: 1.6;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
         }
+
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
         h1 {
             color: #003366;
+            font-size: 2.4em;
+            margin-bottom: 10px;
         }
+
+        p {
+            font-size: 1.15em;
+            color: #333;
+        }
+
         .screenshot {
-            width: 100%;
-            border: 1px solid #ccc;
-            margin: 25px 0;
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            display: block;
+
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(8px);
+
+            padding: 14px;
+            border: 1px solid rgba(0,0,0,0.15);
+
+            box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
+
+        .screenshot:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
         .help-box {
-            background: #eef5ff;
-            padding: 15px;
+            background: rgba(230, 240, 255, 0.7);
+            padding: 20px;
             border-left: 4px solid #003366;
+            border-radius: 10px;
             margin-top: 20px;
+            text-align: left;
         }
+
         .button {
             display: inline-block;
-            padding: 12px 20px;
+            padding: 14px 24px;
             background: #003366;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>RotorBalance Pro</h1>
-        <p>A technician‑grade rotor balancing tool built for reliability professionals.</p>
-
-        <!-- HOME SCREEN -->
-        <img src="assets/images/RBPro-Home.jpg" class="screenshot" alt="RotorBalance Pro Home Screen">
-
-        <div class="help-box">
-            <h3>What this application does</h3>
-            <p>
-                RotorBalance Pro helps technicians perform single‑plane and two‑plane balancing 
-                with clarity, accuracy, and confidence. It replaces spreadsheets and outdated tools 
-                with a clean, modern interface designed for real‑world field use.
-            </p>
-        </div>
-
-        <!-- SINGLE PLANE -->
-        <img src="assets/images/RBPro-SinglePlane.jpg" class="screenshot" alt="Single Plane Balancing Module">
-
-        <!-- TWO PLANE -->
-        <img src="assets/images/RBPro-TwoPlane.jpg" class="screenshot" alt="Two Plane Balancing Module">
-
-        <!-- 4-RUN NO-PHASE -->
-        <img src="assets/images/RBPro-4_Run.jpg" class="screenshot" alt="4-Run No-Phase Method">
-
-        <!-- WEIGHT MANAGER -->
-        <img src="assets/images/RBPro-WtMgr.jpg" class="screenshot" alt="Weight Manager Module">
-
-        <!-- SEVERITY SCREENING -->
-        <img src="assets/images/RBPro-SevScreen.jpg" class="screenshot" alt="Severity Screening Module">
-
-        <!-- TRIAL WEIGHT ESTIMATOR -->
-        <img src="assets/images/RBPro-TWEst.jpg" class="screenshot" alt="Trial Weight Estimator">
-
-        <a class="button" href="https://your-vercel-app-url-here">Start 10‑Day Trial</a>
-    </div>
-</body>
-</html>
+            border-radius: 8px;
+            margin-top: 30px;
+            font
