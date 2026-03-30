@@ -32,27 +32,53 @@
             letter-spacing: 0.5px;
         }
 
-        .screenshot {
-            width: 90%;
+        /* Slide container */
+        .slide-wrapper {
+            position: relative;
             max-width: 900px;
             margin: 40px auto;
-            display: block;
+        }
 
+        /* Slide image */
+        .slide {
+            width: 100%;
             border-radius: 16px;
             background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(8px);
-
             padding: 14px;
             border: 1px solid rgba(0,0,0,0.15);
-
             box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
-        .screenshot:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Navigation arrows */
+        .arrow {
+            cursor: pointer;
+            font-size: 2.2em;
+            color: #003366;
+            user-select: none;
+            padding: 10px 20px;
+        }
+
+        .arrow:hover {
+            color: #0055aa;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .counter {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #333;
         }
     </style>
 </head>
@@ -65,17 +91,11 @@
 
     <h1>Presentation Slides</h1>
 
-    <img src="assets/images/slides/CoverTBD.JPG" class="screenshot" alt="CoverTBD">
-    <img src="assets/images/slides/Home.JPG" class="screenshot" alt="Home">
-    <img src="assets/images/slides/SinglePlane.JPG" class="screenshot" alt="SinglePlane">
-    <img src="assets/images/slides/TwoPlane.JPG" class="screenshot" alt="TwoPlane">
-    <img src="assets/images/slides/4Run.JPG" class="screenshot" alt="4Run">
-    <img src="assets/images/slides/WtMgr.JPG" class="screenshot" alt="WtMgr">
-    <img src="assets/images/slides/Severity.JPG" class="screenshot" alt="Severity">
-    <img src="assets/images/slides/TWEst.JPG" class="screenshot" alt="TWEst">
+    <div class="slide-wrapper">
 
-</body>
-</html>
+        <!-- SLIDES -->
+        <img src="assets/images/slides/CoverTBD.JPG" class="slide active" alt="Slide 1">
+        <img src="assets/images/slides/Home.JPG" class="slide" alt="Slide 2">
 
 
 
