@@ -14,37 +14,39 @@
             text-align: center;
         }
 
-        .hero-image {
+        /* HERO IMAGE WRAPPER */
+        .hero-wrapper {
+            position: relative;
+            display: inline-block;
             width: 80%;
             max-width: 900px;
+        }
+
+        .hero-image {
+            width: 100%;
             border-radius: 16px;
             box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-            margin: 25px auto;
             display: block;
         }
 
-        .hero-buttons {
-            margin-top: 20px;
-        }
+        /* INVISIBLE CLICKABLE HOTSPOT */
+        .hotspot {
+            position: absolute;
 
-        .button {
-            display: inline-block;
-            padding: 12px 22px;
-            margin: 8px 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1.05em;
-        }
+            /* Position based on your engineering coordinates */
+            left: 14%;
+            bottom: 38%;
 
-        .button-primary {
-            background: #003366;
-            color: #fff;
-        }
+            /* Center the hotspot on that point */
+            transform: translate(-50%, 50%);
 
-        .button-secondary {
-            background: #ffffff;
-            color: #003366;
-            border: 1px solid #003366;
+            /* Size of the clickable area (adjustable) */
+            width: 220px;
+            height: 80px;
+
+            /* Invisible but clickable */
+            background: rgba(255, 255, 255, 0);
+            cursor: pointer;
         }
 
         footer {
@@ -58,12 +60,12 @@
 
 <body>
 
-    <!-- HERO IMAGE ONLY -->
-    <img src="assets/images/slides/Hero_Copilot.png" alt="RotorBalance Pro" class="hero-image">
+    <!-- HERO IMAGE WITH INVISIBLE CLICKABLE HOTSPOT -->
+    <div class="hero-wrapper">
+        <img src="assets/images/slides/Hero_Copilot.png" alt="RotorBalance Pro" class="hero-image">
 
-    <div class="hero-buttons">
-        <a href="assets/images/slides/CoverTBD.JPG" class="button button-primary">Get Started</a>
-        <a href="slide.html" class="button button-secondary">View Slides</a>
+        <!-- INVISIBLE BUTTON OVER THE EMBEDDED OVAL -->
+        <a href="slide.html" class="hotspot"></a>
     </div>
 
     <footer>
@@ -72,3 +74,4 @@
 
 </body>
 </html>
+
